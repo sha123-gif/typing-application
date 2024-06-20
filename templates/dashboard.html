@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Typing Speed Test Dashboard</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/styles.css') }}">
+</head>
+
+<body>
+    <div class="container">
+        <h1>Typing Speed Test Dashboard</h1>
+        <div id="paragraph-container">
+            <div id="timer"></div>
+            <div id="original-text"></div>
+            <textarea id="user-text" placeholder="Start typing here..." autofocus></textarea>
+            <button onclick="submitText()" class="btn">Submit</button>
+            <button onclick="regenerateParagraph()" class="btn">Regenerate</button>
+        </div>
+        <div id="result"></div>
+        <a href="/logout" class="btn">Logout</a>
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="{{ url_for('static', filename='js/scripts.js') }}"></script>
+</body>
+
+</html>
